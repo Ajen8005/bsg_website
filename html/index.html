@@ -94,6 +94,15 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.bsg_recent_news_imgs{
+    width: 100%; 
+    height:auto;
+}
+@media only screen and (max-width: 700px){
+    .bsg_recent_news_imgs{
+        display:none;
+    }
+}
 </style>
 <body class = "news-background">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -159,17 +168,41 @@
         <div class = "row">
             <div class = "col-8" style="background-color: rgba(255, 255, 255, 0.7);" >
                 
-                <div class = "row border-bottom mx-2 border-dark" style = "height:150px;" >
-                    <div class = "col-3">
-                        <input type = "image" class = "vertical-center justify-content-center" style = "width: 120px; height: 120px;background-color: rgba(255, 255, 255); ;" src = "../imgs/logos/itchio-logo-textless-black.png">
+                <div class = "row border-bottom mx-2 border-dark" style = "height:auto;" >
+                    <div class = "col-lg-2 col-md-5 col-sm-0" media>
+                        <input type = "image" class = "vertical-center justify-content-center bsg_recent_news_imgs" src = "../imgs/logos/itchio-logo-textless-black.png">
                     </div>
-                    <div class = "col-9" style = "text-overflow: ellipsis;">
-                        <a href = "./bluescarf-games-on-itch.io.html" style = "text-decoration: none;"><p1 class = "py-2" style="font-size: 15pt; line-height:40px; color:black; ">BlueScarf Games on Itch.io!</p1></a>
+                    <div class = "col-lg-10 col-md-7 col-sm-12" style = "text-overflow: ellipsis;">
+                        <a href = "./bluescarf-games-on-itch.io.html" style = "text-decoration: none;"><p1 class = "py-2" style="font-size:1.5vw; line-height:40px; color:black; ">BlueScarf Games on Itch.io!</p1></a>
                         <br>
-                        <p style = "font-size:10pt">Blue Scarf Games has finally setup our Itch.io! From here we’ll be releasing tons of content, from Development versions of the game, to brand new Online versions! Come check it out and play whatever we’ve recently uploaded! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        <p style = "font-size:1vw">Blue Scarf Games has finally setup our Itch.io! From here we’ll be releasing tons of content, from Development versions of the game, to brand new Online versions! Come check it out and play whatever we’ve recently uploaded!</p>
                     </div>
                 </div>
 
+                <div class = "row border-bottom mx-2 border-dark" style = "height:auto;" >
+                    <div class = "col-lg-2 col-md-5">
+                        <input type = "image" class = "vertical-center justify-content-center bsg_recent_news_imgs"  src = "../imgs/logos/indigo-project-365.png" media="(max-width:1500px)">
+                    </div>
+                    <div class = "col-lg-10 col-md-7 col-sm-12" style = "text-overflow: ellipsis;">
+                        <a href = "./bluescarf-games-on-itch.io.html" style = "text-decoration: none;"><p1 class = "py-2" style="font-size:1.5vw; line-height:40px; color:black; ">Indigo Project 365 TCG - Set 1 - Asset Pack Cards</p1></a>
+                        <br>
+                        <p style = "font-size:1vw">The first booster packs have been released and will continue to be as time goes on for the first set of The Indigo Project 365 TCG! For those curious on the contents of such packs, refer to the full Asset-Pack card list here!</p>
+                    </div>
+                </div>
+
+                <div class = "row border-bottom mx-2 border-dark" style = "height:auto;" >
+                    <div class = "col-lg-2 col-md-5">
+                        <input type = "image" class = "vertical-center justify-content-center bsg_recent_news_imgs"  src = "../imgs/logos/indigo-project-365.png" media="(max-width:1500px)">
+                    </div>
+                    <div class = "col-lg-10 col-md-7 col-sm-12" style = "text-overflow: ellipsis;">
+                        <a href = "./bluescarf-games-on-itch.io.html" style = "text-decoration: none;"><p1 class = "py-2" style="font-size:1.5vw; line-height:40px; color:black; ">Indigo Project 365 TCG - Set 1 - Asset Pack Cards</p1></a>
+                        <br>
+                        <p style = "font-size:1vw">The first booster packs have been released and will continue to be as time goes on for the first set of The Indigo Project 365 TCG! For those curious on the contents of such packs, refer to the full Asset-Pack card list here!</p>
+                    </div>
+                </div>
+
+
+                <a href = "#" ><-Other Entries</a>
 
             </div>
             <div class = "col-4 d-flex justify-content-center" style="background-color: rgba(255, 255, 255, 0.7);">
