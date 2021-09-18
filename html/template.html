@@ -46,6 +46,14 @@
     margin: auto;
     width:70%;
 }
+.html, p1{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 40px;
+}
+.header-shadow{
+    margin:auto;
+    width: 100%;
+}
 </style>
 <body style="background-color:white;">
 
@@ -63,13 +71,13 @@
 
     <main>
     <!-- Header -->
-    <div class=" container border-3 py-1" style="background-color: white;" >
-        <header class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom border-dark">
+    <div class= "container-fluid header-shadow border-bottom" style = "background-color:rgb(245,245,245);" >
+        <header class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
             <ul class="nav col-1 col-lg-auto mb-2 justify-content-center mb-md-0">
             <img class = "bi me-2" style = "height: 50px; width: 50px; float:left; " src = "../imgs/logos/bsg.indigobear.png">
-                <li class="hover-underline-animation"><a href="/html/home.html" class="nav-link px-2 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Home</a></li>
-                <li class="hover-underline-animation"><a href="/html/classes.html" class="nav-link px-2 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">About</a></li>
-                <li class="hover-underline-animation"><a href="/html/gene_splicing.html" class="nav-link px-2 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Games</a></li>
+                <li class="hover-underline-animation"><a href="./index.html" class="nav-link px-3 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Home</a></li>
+                <li class="hover-underline-animation"><a href="./about.html" class="nav-link px-3 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">About</a></li>
+                <li class="hover-underline-animation"><a href="./games.html" class="nav-link px-3 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Games</a></li>
             </ul>
         </header>
     </div>
@@ -81,49 +89,34 @@
     </div>
     <!-- Image  -->
     <div class = "d-flex justify-content-center image-div-bsg">
-        <img style = "height: 300px; object-fit:contain;" src = "../imgs/bckgrnds/facebookBSGbackG.png">
+        <img class = "border-top border-bottom py-2" style = "height: 300px; object-fit:contain;" src = "../imgs/bckgrnds/facebookBSGbackG.png">
     </div>
     <!-- Text -->
-    <div class = "container d-flex justify-content-start " style= "margin: auto; width: 70%; overflow-x: hidden;">
-        <pre>
-            <p1 style = "font-family:Arial, Helvetica, sans-serif; overflow-x:hidden">
-                <b>Heartbroken over son’s death from COVID</b>
+    <div class = "container justify-content-start ">
+        <h1 style= "font-family: Arial, Helvetica, sans-serif;">
+            This is a header
+        </h1>
+        <!-- use "&emsp;" for a tab -->
+        <br> <!-- This is a line break--> 
+        <a href = "#"><p1>Change what href equals to to hyperlink</p1></a>
 
-                <u>We had a very nice funeral last week for my 43-year-old son, another victim of COVID.</u>
+        <pre> <!-- This is formatted text section-->
+        <p1 style = "font-family:Arial, Helvetica, sans-serif; overflow-x:hidden">
+<b>This is a bold line</b>
 
-                <i>He worked in a position where he interacted with the public daily. As my son was feeling ill, Gov. Ron DeSantis opened a Regeneron site nearby with much fanfare. That day, his wife got him the soonest appointment – for 10 days later!</i>
+<u>This is an underlined line</u>
 
-                Text Under Here
-                On his appointment date, he was put on a ventilator. On Labor Day, he died.
+<i>This is an italic line</i>
 
-                He did not have any “underlying health conditions” and had had his first vaccine shot!
-
-                More:How to send a letter to the editor
-
-                We see DeSantis standing in photo ops next to COVID survivors. What I didn’t see was him standing with my daughter-in-law as she told her 10-year-old daughter that Daddy was not coming home, ever!
-
-                COVID kills indiscriminately and doesn’t care who or where you are, your age or health. There is no answer to our granddaughter’s question of why?
-
-                DeSantis’ policy of an open economy at all costs is killing thousands of Floridians. Is he going to be held accountable?
-
-                If you don’t believe the science, but believe that a piece of cloth inhibits your freedom, you need to recognize the results of your nonaction. I am angry, heartbroken. Next time it might be your son! 
-
-                Ken Smith, Venice
-
-                Urge Congress to fund workforce training
-
-                The U.S. Senate recently passed a bipartisan resolution designating September as “National Workforce Development Month,” recognizing the important contributions that local workforce stakeholders provide in support of job seekers and career advancers, particularly those who have faced employment challenges because of the COVID-19 pandemic.
-
-                Your local Goodwill organizations are a crucial partner in the workforce system, providing job placement services, skills training, employment and other community-based services, such as career counseling, access to reliable transportation and child care for people with barriers to employment.
-
-                The House and Senate are currently crafting reconciliation legislation that will focus on promoting jobs and families. President Joe Biden has called for a $100 billion investment over the next 10 years in workforce training programs and other services to connect workers with good-paying jobs and provide businesses a new pipeline of skilled employees.
-            </p1>
+This is normal font
+        </p1>
         </pre>
+
     </div>
 
     <!-- Footer -->
     <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-0 my-2">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top border-dark">
             <div class="col-md-4 d-flex align-items-center">
                     <span class="text-muted">&copy; Bluescarf Games</span>
             </div>
