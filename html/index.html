@@ -51,7 +51,29 @@
     /* background-color:#CCC; */		
     overflow-y:auto;
 }
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
 
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 8px;
+  left: 12px;
+  background-color: black;
+  transform-origin:bottom left;
+  transition: transform 0.15s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 </style>
 <body style="background-color:white;">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -67,27 +89,16 @@
     </svg>
     <main>
         <!-- Header -->
-    <div class="shadow-element">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 ">
-            <img class = "bi me-2" style = "height: 100px; width: 100px;" src = "../imgs/logos/bsg.indigobear.png">
-
-        <!-- nav bar -->
-        <ul class="d-flex container nav col-md-auto justify-content-center">
-            <li class = "nav_button_bsg"><a href="#" onmouseover = bearappear(id) class=" nav-link px-2 border-start border-3 border-dark border-end">
-                <img src = "../imgs/logos/Home.png">
-            </a></li>
-            <li>
-                <img class = "px-2" style = "height: 100px; width: 300px; position: relative; top: 0px; " src = "../imgs/logos/Centered Logo Perfect.png">
-            </li>
-            <li class = "nav_button_bsg"><a href="#" class=" nav-link px-2 border-3 border-end border-dark border-start">
-                <img class = "" src = "../imgs/logos/About.png">
-            </a></li>
-            <li class = "nav_button_bsg"><a href="#" class=" nav-link px-2 border-dark border-end border-3">
-                <img class = "" src = "../imgs/logos/Games.png">
-            </a></li>
-        </ul>
-        </header>
-    </div>
+        <div class=" container border-3 py-1" style="background-color: white;" >
+            <header class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom border-dark">
+                <ul class="nav col-1 col-lg-auto mb-2 justify-content-center mb-md-0">
+                <img class = "bi me-2" style = "height: 50px; width: 50px; float:left; " src = "../imgs/logos/bsg.indigobear.png">
+                    <li class="hover-underline-animation"><a href="/html/home.html" class="nav-link px-2 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Home</a></li>
+                    <li class="hover-underline-animation"><a href="/html/classes.html" class="nav-link px-2 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">About</a></li>
+                    <li class="hover-underline-animation"><a href="/html/gene_splicing.html" class="nav-link px-2 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Games</a></li>
+                </ul>
+            </header>
+        </div>
 
     <!-- Carousel -->
     <div id="myCarousel" class="carousel slide carousel_div py-2" data-bs-ride="carousel">
@@ -98,10 +109,10 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class = "carousel_images" src = "../imgs/bckgrnds/bsg_img1.jpg">
+                <img class = "carousel_images" src = "../imgs/bckgrnds/twitter_background.png">
             </div>
             <div class="carousel-item">
-                <img class = "carousel_images"  src = "../imgs/bckgrnds/bsg_img2.jpg">
+                <img class = "carousel_images"  src = "../imgs/bckgrnds/facebookBSGbackG.png">
             </div>
             <div class="carousel-item">
                 <img class = "carousel_images"  src = "../imgs/bckgrnds/bsg_img3.jpg">
@@ -168,9 +179,7 @@
             </div>
         </div>
             <div class = "col-6 d-flex justify-content-center">
-                <h1>Twitter</h1>
-            </div>
-        </div>
+                <a class="twitter-timeline" data-width="1000" data-height="500" data-dnt="true" data-theme="light" href="https://twitter.com/BlueScarfGames?ref_src=twsrc%5Etfw">Tweets by BlueScarfGames</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        </div>
     </div>
 
 
