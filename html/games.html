@@ -112,15 +112,22 @@ html, body {
   width: 15%;
 }
 .dnd-logo-clipboard{
-  position: absolute;
-  top: 80%;
-  left: 22.25%;
-  height: 30%;
-  width: 12%;
+  position: relative;
+  margin-left: 30%;
+  margin-top: 50%;
+  height: 40%;
+  width: 40%;
 }
 .dnd-homebrew-class-big{
   width: 100%;
   transform: scale(1.03);
+}
+.dnd-games-back{
+  background-image: url("../imgs/Games/dnd_back.png");
+  background-repeat: no-repeat;
+  background-size: 94% 500px;
+  background-position: 50% 0px;
+  /* object-fit: cover; */
 }
 </style>
 <body>
@@ -161,10 +168,9 @@ html, body {
         <div class = "container  py-3 image_back" style ="background-color: rgba(255, 255, 255, 0.7); width:68%; height: 100%;" id = "background_back">
             <div id = "all_back">
                 <ul class = "nav col-1 col-lg-auto justify-content-center">
-                    <li class = "px-3" style="width:33%;">
-                      <div id = "dnd-Home-Brew" onmouseenter="moveclip()" onmouseleave="resetclip()">
-                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/homebrew_back.png"  name = "dndhomebrew" class = "button game_icons" id = "dnd-back">
-                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/dndLogo.png"  name = "dndhomebrew" class = "button dnd-logo-overlay" id = "dnd-logo">
+                    <li class = "px-3 dnd-games-back" style="width:33%;">
+                      <div id = "dnd-Home-Brew" onclick = RnHdndhomebrew() onmouseenter="moveclip()" onmouseleave="resetclip()" style = "cursor: pointer;">
+                       <!-- <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/homebrew_back.png"  name = "dndhomebrew" class = "button game_icons" id = "dnd-back">  -->
                         <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/clipboard.png"  name = "dndhomebrew" class = "button dnd-logo-clipboard" id = "dnd-logo-clipboard_id">
                       </div>
                     </li>
@@ -310,15 +316,15 @@ var x = document.getElementById("dndhomebrew");
 
 let static_clip_x = document.getElementById("dnd-logo-clipboard_id").style.left; 
 let static_clip_y = document.getElementById("dnd-logo-clipboard_id").style.top; 
-let static_logo_x = document.getElementById("dnd-logo").style.left; 
-let static_logo_y = document.getElementById("dnd-logo").style.top; 
+// let static_logo_x = document.getElementById("dnd-logo").style.left; 
+// let static_logo_y = document.getElementById("dnd-logo").style.top; 
 
 let dndMove = document.getElementById
 
 function moveclip()
 {
   let clipboard = document.getElementById("dnd-logo-clipboard_id")
-  document.getElementById("dnd-back").className += " dnd-homebrew-class-big";
+  document.getElementById("dnd-Home-Brew").className += " dnd-homebrew-class-big";
 
   var clip_x = parseInt(getComputedStyle(clipboard).left);
   var clip_y = parseInt(getComputedStyle(clipboard).top);
@@ -383,16 +389,16 @@ function moveclip()
 
 function resetclip()
 {
-  let logo = document.getElementById("dnd-logo")
+  // let logo = document.getElementById("dnd-logo")
   let clipboard = document.getElementById("dnd-logo-clipboard_id")
 
-  document.getElementById("dnd-back").className = document.getElementById("dnd-back").className.replace(" dnd-homebrew-class-big", "");
+  document.getElementById("dnd-Home-Brew").className = document.getElementById("dnd-Home-Brew").className.replace(" dnd-homebrew-class-big", "");
 
   for (var i = 1; i < 1000; i++)
         window.clearInterval(i);
 
-  logo.style.left = static_logo_x;
-  logo.style.top = static_logo_y;
+  // logo.style.left = static_logo_x;
+  // logo.style.top = static_logo_y;
 
   clipboard.style.left = static_clip_x;
   clipboard.style.top = static_clip_y;
