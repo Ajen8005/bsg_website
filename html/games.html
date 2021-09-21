@@ -113,6 +113,24 @@ html, body {
   background-size: 100% 100%;
   background-color: rgb(18, 21, 22);
 }
+.dnd-logo-overlay{
+  position: absolute;
+  top: 62.5%;
+  left: 19%;
+  height: 15%;
+  width: 15%;
+}
+.dnd-logo-clipboard{
+  position: absolute;
+  top: 80%;
+  left: 22.25%;
+  height: 30%;
+  width: 12%;
+}
+.dnd-homebrew-class-big{
+  width: 100%;
+  transform: scale(1.03);
+}
 </style>
 <body>
     <div class ="wrapper">
@@ -150,19 +168,23 @@ html, body {
             <img class = "d-flex justify-content-center mb-md-4" style="width:100%;" src= "../imgs/bckgrnds/banner3">
         </div>
         
-        <div class = "container rounded py-3 image_back" style ="background-color:rgb(18, 21, 22); width:68%; height: 100%;" id = "background_back">
+        <div class = "container  py-3 image_back" style ="background-color: rgba(255, 255, 255, 0.7); width:68%; height: 100%;" id = "background_back">
             <div id = "all_back">
                 <ul class = "nav col-1 col-lg-auto justify-content-center">
-                    <li class = "px-3" style="width:33%; margin-top:10px">
-                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/dnd homebrew.png"  name = "dndhomebrew" class = "button game_icons">
-                        <br>                
+                    <li class = "px-3" style="width:33%;">
+                      <div id = "dnd-Home-Brew" onmouseenter="moveclip()" onmouseleave="resetclip()">
+                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/homebrew_back.png"  name = "dndhomebrew" class = "button game_icons" id = "dnd-back">
+                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/dndLogo.png"  name = "dndhomebrew" class = "button dnd-logo-overlay" id = "dnd-logo">
+                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/clipboard.png"  name = "dndhomebrew" class = "button dnd-logo-clipboard" id = "dnd-logo-clipboard_id">
+                      </div>
                     </li>
-                    <li class = "px-3" style="width:33%; margin-top:10px" >
-                        <input type = "image" onclick = RnHtcg() src= "../imgs/Games/indigo tcg"  name = "tcg" class = "game_icons"> 
+                    <li class = "px-3" style="width:33%" >
+                        <input type = "image" onclick = RnHtcg() src= "../imgs/Games/indigo tcg.png"  name = "tcg" class = "game_icons"> 
                         <br>                     
                     </li>
-                    <li class = "px-3" style="width:33%; margin-top:10px" >
-                        <input type = "image" onclick = RnHproject366() src= "../imgs/Games/indigo project 366" name = "project366" class = "game_icons">
+                    <li class = "px-3" style="width:33%" >
+                        <input type = "image" onclick = RnHproject366() src= "../imgs/Games/indigo project 366.png" name = "project366" class = "game_icons">
+                        <!-- <input type = "image" onclick = RnHproject366() src= "../imgs/Games/red_dot.png" name = "project366" class = "game_icons"> -->
                         <br>
                     </li>
                 </ul>
@@ -201,7 +223,7 @@ html, body {
                 Under this broader definition, the earliest known sharks date back to more than 420 million years ago.[3] Acanthodians are often referred to as "spiny sharks"; though they are not part of Chondrichthyes proper, they are a paraphyletic assemblage leading to cartilaginous fish as a whole. Since then, sharks have diversified into over 500 species. They range in size from the small dwarf lanternshark (Etmopterus perryi), a deep sea species of only 17 centimetres (6.7 in) in length, to the whale shark (Rhincodon typus), the largest fish in the world, which reaches approximately 12 metres (40 ft) in length.[4] Sharks are found in all seas and are common to depths of 2,000 metres (6,600 ft). They generally do not live in freshwater although there are a few known exceptions, such as the bull shark and the river shark, which can be found in both seawater and freshwater.[5] Sharks have a covering of dermal denticles that protects their skin from damage and parasites in addition to improving their fluid dynamics. They have numerous sets of replaceable teeth.[6]</p1>
                 </center> 
                 </div>
-    </div>
+        </div>
         <!-- project366 -->
         <div class="container justfy-content-center" style = "display:none; width:68%; background-color:white; padding:30px;" id = "project366">
             
@@ -219,6 +241,9 @@ html, body {
                 A Grapsus tenuicrustatus climbing up a rock in Hawaii
               Each species has a particular number of zoeal stages, separated by moults, before they change into a megalopa stage, which resembles an adult crab, except for having the abdomen (tail) sticking out behind. After one more moult, the crab is a juvenile, living on the bottom rather than floating in the water. This last moult, from megalopa to juvenile, is critical, and it must take place in a habitat that is suitable for the juvenile to survive.[13]: 63–77 </p1>
               </div>  
+        </div>
+
+        <div class = "container" style = "width:68%; height: 100px;">
         </div>
     
 <!-- Footer -->
@@ -298,6 +323,96 @@ function darkMode() {
  
 }
 
+let static_clip_x = document.getElementById("dnd-logo-clipboard_id").style.left; 
+let static_clip_y = document.getElementById("dnd-logo-clipboard_id").style.top; 
+let static_logo_x = document.getElementById("dnd-logo").style.left; 
+let static_logo_y = document.getElementById("dnd-logo").style.top; 
+
+let dndMove = document.getElementById
+
+function moveclip()
+{
+  let clipboard = document.getElementById("dnd-logo-clipboard_id")
+  document.getElementById("dnd-back").className += " dnd-homebrew-class-big";
+
+  var clip_x = parseInt(getComputedStyle(clipboard).left);
+  var clip_y = parseInt(getComputedStyle(clipboard).top);
+
+  
+  var init_x = clip_x;
+  var init_y = clip_y;
+
+  let dirX = ["Left", "Right", "None"];
+  let dirY = [ "Up", "Down", "None"];
+  // let xdir = dirX[Math.floor(Math.random() * 3)];
+  // let ydir = dirY[Math.floor(Math.random() * 3)];
+  let xdir = "None";
+  let ydir = "Up";
+  id = setInterval(frame, 200);
+  function frame(){
+    if (ydir == "Up"){
+      clipboard.style.top = --clip_y + "px";
+    }
+    else if(ydir == "Down"){
+      clipboard.style.top = ++clip_y + "px";
+    }
+
+    if (xdir == "Left"){
+      clipboard.style.left = --clip_x + "px";
+    }
+    else if(xdir == "Right"){
+      clipboard.style.left = ++clip_x + "px";
+    }
+
+    // console.log(init_y - clip_y)
+
+    if (Math.abs(init_x - clip_x) > 5){
+      
+      if (xdir == "Left")
+      {
+        xdir = "Right";
+
+      }
+      else if (xdir == "Right"){
+        xdir = "Left";
+
+      }
+
+      // xdir = dirX[Math.floor(Math.random() * 3)];
+      // ydir = dirY[Math.floor(Math.random() * 3)];
+    }
+    if (Math.abs(init_y - clip_y) > 3){
+      console.log("here")
+      if (ydir == "Up"){
+        ydir = "Down";
+      }
+      else if (ydir == "Down"){
+        ydir = "Up";
+      }
+        
+      // xdir = dirX[Math.floor(Math.random() * 3)];
+    }
+  }
+
+}
+
+function resetclip()
+{
+  let logo = document.getElementById("dnd-logo")
+  let clipboard = document.getElementById("dnd-logo-clipboard_id")
+
+  document.getElementById("dnd-back").className = document.getElementById("dnd-back").className.replace(" dnd-homebrew-class-big", "");
+
+  for (var i = 1; i < 1000; i++)
+        window.clearInterval(i);
+
+  logo.style.left = static_logo_x;
+  logo.style.top = static_logo_y;
+
+  clipboard.style.left = static_clip_x;
+  clipboard.style.top = static_clip_y;
+
+}
    
 
 </script>
