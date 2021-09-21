@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>BlueScarf Games Library</title>
+    <title>Games | BlueScarf Games
+    </title>
     <link rel="icon" href="../imgs/logos/bsg.indigobear.png">
 </head>
 <style>
@@ -103,6 +104,14 @@ html, body {
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100% 100%;
+      
+}
+.darkbackground {
+  background-image: url("../imgs/bckgrnds/blackbackgroundcenterwhite.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-color: rgb(18, 21, 22);
 }
 </style>
 <body>
@@ -125,33 +134,34 @@ html, body {
 
     <main class = "gradientbackground">
         <!-- Header -->
-        <div class= "container-fluid header-shadow border-bottom" style = "background-color:rgb(245,245,245); position:sticky; top:1px; z-index: 1;" >
-            <header class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
-                <ul class="nav col-1 col-lg-auto mb-2 justify-content-center mb-md-0">
-                <img class = "bi me-2" style = "height: 50px; width: 50px; float:left; " src = "../imgs/logos/bsg.indigobear.png">
-                    <li class="hover-underline-animation"><a href="./index.html" class="nav-link px-3 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Home</a></li>
-                    <li class="hover-underline-animation"><a href="./about.html" class="nav-link px-3 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">About</a></li>
-                    <li class="hover-underline-animation"><a href="./games.html" class="nav-link px-3 link-dark" style = "padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Games</a></li>
-                </ul>
-            </header>
-        </div>
+        <div class= "container-fluid header-shadow border-bottom" style = "background-color:white; position:sticky;  z-index: 1; top:0px;" >
+          <header class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1">
+              <ul class="nav col-1 col-lg-auto mb-2 justify-content-center mb-md-0">
+              <img class = "bi me-2" style = "height: 50px; width: 50px; float:left; " src = "../imgs/logos/bsg.indigobear.png">
+                  <li class="hover-underline-animation"><a href="./index.html" class="nav-link px-3 link-dark" style = " padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Home</a></li>
+                  <li class="hover-underline-animation"><a href="./about.html" class="nav-link px-3 link-dark" style = " padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">About</a></li>
+                  <li class="hover-underline-animation"><a href="./games.html" class="nav-link px-3 link-dark" style = " padding:0%; font-size: 30px; margin-left:10px; margin-right:10px;">Games</a></li>
+                  <li><button onclick = darkMode() class="nav-link px-3 link-dark" style = " padding:0%; font-size: 30px; margin-left:1000px; margin-right:10px;">Toggle Dark Mode</button></li>
+          </ul>
+          </header>
+      </div>
         
         <div class = "container justify-content-center d-flex py-2" >
             <img class = "d-flex justify-content-center mb-md-4" style="width:100%;" src= "../imgs/bckgrnds/banner3">
         </div>
         
-        <div class = "container border rounded py-3 image_back" style ="background-color:gray; width:68%; height: 100%;" id = "background_back">
+        <div class = "container rounded py-3 image_back" style ="background-color:rgb(18, 21, 22); width:68%; height: 100%;" id = "background_back">
             <div id = "all_back">
                 <ul class = "nav col-1 col-lg-auto justify-content-center">
-                    <li class = "px-3" style="width:33%;">
-                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/dnd homebrew"  name = "dndhomebrew" class = "button game_icons">
+                    <li class = "px-3" style="width:33%; margin-top:10px">
+                        <input type = "image" onclick = RnHdndhomebrew() src= "../imgs/Games/dnd homebrew.png"  name = "dndhomebrew" class = "button game_icons">
                         <br>                
                     </li>
-                    <li class = "px-3" style="width:33%" >
+                    <li class = "px-3" style="width:33%; margin-top:10px" >
                         <input type = "image" onclick = RnHtcg() src= "../imgs/Games/indigo tcg"  name = "tcg" class = "game_icons"> 
                         <br>                     
                     </li>
-                    <li class = "px-3" style="width:33%" >
+                    <li class = "px-3" style="width:33%; margin-top:10px" >
                         <input type = "image" onclick = RnHproject366() src= "../imgs/Games/indigo project 366" name = "project366" class = "game_icons">
                         <br>
                     </li>
@@ -212,8 +222,8 @@ html, body {
         </div>
     
 <!-- Footer -->
-<div class="container-fluid" style = "margin:auto; width:100%; background-color:rgb(245,245,245) ;">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-2">
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top border-dark">
         <div class="col-md-4 d-flex align-items-center">
                 <span class="text-muted">&copy; Bluescarf Games</span>
         </div>
@@ -281,6 +291,11 @@ var x = document.getElementById("dndhomebrew");
     x.style.display = "none";
   }
   window.scrollBy(0, 1000);
+}
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("darkbackground");
+ 
 }
 
    
